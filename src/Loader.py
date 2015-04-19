@@ -5,7 +5,10 @@ class Loader:
         self.__url = url
     
     def load(self):
-        return urllib.request.urlopen(self.__url).readlines()
+        loaded = list(map(str, urllib.request.urlopen(self.__url).readlines()))
+        for i in range(len(loaded)):
+            loaded[i] = loaded[i][2:-3]
+        return loaded
     
     def get_url(self):
         return self.__url
