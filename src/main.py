@@ -1,5 +1,6 @@
 from Loader import Loader
 from WikiParser import Parser
+from HtmlGenerator import Generator
 
 def main():
     url = "https://bs.wikipedia.org/wiki/Kategorija:Stranice_sa_istim_argumentima_kod_poziva_%C5%A1ablona"
@@ -7,7 +8,7 @@ def main():
     
     max_count = 0
     ans = []
-    for k in range(1):
+    for k in range(9):
         mode = 1
         j = 0
         for i in range(155, len(wiki)):
@@ -30,8 +31,8 @@ def main():
                     bug_ind = url.find("&amp")
                     wiki = Loader(url[:bug_ind + 1] + url[bug_ind + 5:]).load()
                     break
-    print(max_count)
-    print(ans)
+                
+    Generator(max_count, ans).gen_out()
     
     
 main()
