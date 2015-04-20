@@ -1,3 +1,3 @@
 # WikiChecker
-надо запустить WikiCheck.py
-ответ в Answer.html
+run WikiCheck.py
+answer in Answer.html
