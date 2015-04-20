@@ -1,4 +1,4 @@
-from Loader import Loader
+from src.Loader import Loader
 
 class Parser:
     __count = 0

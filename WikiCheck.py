@@ -32,3 +32,6 @@ def main():
                     wiki = Loader(url[:bug_ind + 1] + url[bug_ind + 5:]).load()
                     break
     Generator(max_count, ans).gen_out()
+
+if __name__ == "__main__":
+    main()
